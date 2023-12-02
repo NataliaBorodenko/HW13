@@ -3,6 +3,7 @@ package org.example;
 public class Todos {
 
     private Task[] tasks = new Task[0];
+
     private Task[] addToArray(Task[] current, Task task) {
         Task[] tmp = new Task[current.length + 1];
         for (int i = 0; i < current.length; i++) {
@@ -21,7 +22,7 @@ public class Todos {
         return tasks;
     }
 
-    public Task[] search (String query) {
+    public Task[] search(String query) {
         Task[] result = new Task[0];
         for (Task task : tasks) {
             if (task.matches(query)) {
